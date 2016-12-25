@@ -2,19 +2,27 @@ if [ -f /etc/bashrc ] ; then
    . /etc/bashrc
 fi
 
-export PS1="\n\n[\u@\h:\w]\n\n\n> "
+
+# # # # # # # # # # # #
+# #   CLASSIC
+# # # # # # # # # # # #
 
 set -o vi
 
+export PS1="\n\n[\u@\h:\w]\n\n\n> "
+
+alias l="ls -F"
+
+alias ll="ls -lFh"
+
+alias c="clear"
 
 now() {
-        NOW="`date '+%Y%h%m_%H-%M%p'`"
+   NOW="`date '+%Y%h%m_%H-%M%p'`"
    echo 
-        echo $NOW
-        echo
+   echo $NOW
+   echo
 }
-
-
 
 
 # # # # # # # # # # # #
@@ -87,14 +95,6 @@ alias gc="git checkout"
 alias gw="git config -l"
 alias git.who="gw"
 alias git.w="gw"
-alias gitw="gw"
-
-
-# # # # # # # # # # # #
-# #   GIT - END
-# # # # # # # # # # # #
-
-
 
 # # # # # # # # # # # #
 # #   SBT 
@@ -106,16 +106,6 @@ alias sr="sbt clean ; sbt compile; sbt run"
 
 alias r="sbt run"
 
-
-# # # # # # # # # # # #
-# #   CLASSIC
-# # # # # # # # # # # #
-
-alias l="ls -F"
-
-alias ll="ls -lFh"
-
-alias c="clear"
 
 
 # # # # # # # # # # # #
