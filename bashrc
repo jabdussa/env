@@ -6,6 +6,39 @@ export PS1="\n\n[\u@\h:\w]\n\n\n> "
 
 set -o vi
 
+
+now() {
+        NOW="`date '+%Y%h%m_%H-%M%p'`"
+   echo 
+        echo $NOW
+        echo
+}
+
+
+
+
+# # # # # # # # # # # #
+# #   SCREEN
+# # # # # # # # # # # #
+
+alias jl="screen -ls"
+
+alias j1="screen -d -R jab1"
+
+alias j2="screen -d -R jab2"
+
+alias j3="screen -d -R jab3"
+
+vibash(){
+  vi ~/.bashrc
+}
+
+
+# # # # # # # # # # # #
+# #   ENV
+# # # # # # # # # # # #
+
+
 b.push(){
 	CDIR="`pwd`"
 	cd ~/env
@@ -75,16 +108,14 @@ alias r="sbt run"
 
 
 # # # # # # # # # # # #
-# #   2 PUSH OR NOT TO PUSH  ;)
+# #   CLASSIC
 # # # # # # # # # # # #
 
+alias l="ls -F"
 
-alias 2b="pushd ~/bashrc"
-alias 2bb="pushd ~/Dropbox/_b_b_/new"
-alias pd="2b"
-alias p="2b"
-alias po="popd"
+alias ll="ls -lFh"
 
+alias c="clear"
 
 
 # # # # # # # # # # # #
