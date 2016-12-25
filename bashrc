@@ -11,6 +11,8 @@ set -o vi
 
 export PS1="\n\n[\u@\h:\w]\n\n\n> "
 
+export PATH=/opt/local/sbt/latest/bin:$PATH
+
 alias l="ls -F"
 
 alias ll="ls -lFh"
