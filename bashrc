@@ -1,3 +1,9 @@
+if [ -f /etc/bashrc ] ; then  
+   . /etc/bashrc
+fi
+
+set -o vi
+
 b.push(){
 	CDIR="`pwd`"
 	cd ~/env
@@ -26,7 +32,6 @@ b.merge(){
 alias gb="git branch"
 alias git.b="gb"
 alias gitb="gb"
-
 
  
 g() {
