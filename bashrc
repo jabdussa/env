@@ -2,6 +2,8 @@ if [ -f /etc/bashrc ] ; then
    . /etc/bashrc
 fi
 
+export PS1="\n\n[\u@\h:\w]\n\n\n> "
+
 set -o vi
 
 b.push(){
