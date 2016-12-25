@@ -45,6 +45,9 @@ vibash(){
 # # # # # # # # # # # #
 # #   ENV
 # # # # # # # # # # # #
+alias b=". ~/env/bashrc"
+
+alias vib="vi ~/env/bashrc"
 
 
 b.push(){
