@@ -4,14 +4,21 @@ fi
 
 
 # # # # # # # # # # # #
+# #   PATH
+# # # # # # # # # # # #
+
+export PATH=/opt/local/sbt/latest/bin:$PATH
+
+
+
+# # # # # # # # # # # #
 # #   CLASSIC
 # # # # # # # # # # # #
 
 set -o vi
 
-export PS1="\n\n[\u@\h:\w]\n\n\n> "
-
-export PATH=/opt/local/sbt/latest/bin:$PATH
+BAR="========================="
+export PS1="\n\n\n  $BAR \n  date: \d \t \n  step: \#  \n  user: \u \n  host: \h \n  dir:  \w \n  $BAR \n\n\n  => "
 
 alias l="ls -F"
 
@@ -27,6 +34,7 @@ now() {
 }
 
 
+
 # # # # # # # # # # # #
 # #   SCREEN
 # # # # # # # # # # # #
@@ -39,17 +47,17 @@ alias j2="screen -d -R jab2"
 
 alias j3="screen -d -R jab3"
 
-vibash(){
-  vi ~/.bashrc
-}
+
 
 
 # # # # # # # # # # # #
 # #   ENV
 # # # # # # # # # # # #
+
 alias b=". ~/env/bashrc"
 
 alias vib="vi ~/env/bashrc"
+alias viv="vi ~/env/vimrc"
 
 
 b.push(){
@@ -60,6 +68,7 @@ b.push(){
 	git push
 	cd $CDIR 
 }
+
 
 b.merge(){
 	CDIR="`pwd`"
@@ -101,6 +110,8 @@ alias gw="git config -l"
 alias git.who="gw"
 alias git.w="gw"
 
+
+
 # # # # # # # # # # # #
 # #   SBT 
 # # # # # # # # # # # #
@@ -114,7 +125,7 @@ alias r="sbt run"
 
 
 # # # # # # # # # # # #
-# #   #go
+# #   GO
 # # # # # # # # # # # #
 
 alias 1="pushd ~/game_of_life"
