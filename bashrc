@@ -24,6 +24,10 @@ alias l="ls -F"
 
 alias ll="ls -lFh"
 
+alias pd="pushd $1"
+
+alias po="popd"
+
 alias c="clear"
 
 now() {
