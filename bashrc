@@ -20,6 +20,9 @@ set -o vi
 BAR="========================="
 export PS1="\n\n\n  $BAR \n  date: \d \t \n  step: \#  \n  user: \u \n  host: \h \n  dir:  \w \n  $BAR \n\n\n  => "
 
+
+alias c="clear"
+
 alias l="ls -F"
 
 alias ll="ls -lFh"
@@ -28,7 +31,22 @@ alias pd="pushd $1"
 
 alias po="popd"
 
-alias c="clear"
+alias 2="pushd $1"
+
+alias 2books="pushd ~/books"
+
+
+h(){
+
+	if [ -z "$1" ] ; then
+      history 
+  else
+     history | grep "$1" | grep -v "grep"
+
+  fi
+
+}
+
 
 now() {
    NOW="`date '+%Y%h%m_%H-%M%p'`"
