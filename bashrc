@@ -39,14 +39,22 @@ alias 2books="pushd ~/books"
 
 
 h(){
-
 	if [ -z "$1" ] ; then
       history 
   else
      history | grep "$1" | grep -v "grep"
-
   fi
+}
 
+
+mz(){
+	if [ ! -d "~/z" ] ; then
+		mkdir -p ~/z
+		FILE="`basename $1`"
+		mv "$1" ~/z/$FILE
+	else 
+		mv "$1" ~/z/$FILE
+  fi
 }
 
 
@@ -79,7 +87,6 @@ alias j3="screen -d -R jab3"
 # # # # # # # # # # # #
 
 alias b=". ~/env/bashrc"
-
 alias vib="vi ~/env/bashrc"
 alias viv="vi ~/env/vimrc"
 
@@ -167,4 +174,12 @@ jab1.scp(){
 	scp "$1" jabdussa1@jabdussa.com:~/z
 }
 
+alias l.z="ls -lFh  ~/z"
+alias lz="l.z"
+
+alias l.d="ls -lFh  ~/Downloads"
+alias ld="l.d"
+
+alias 2z="pushd ~/z"
+alias 2dl="pushd ~/Downloads"
 
