@@ -7,8 +7,9 @@ fi
 # #   PATH
 # # # # # # # # # # # #
 
+export PATH=~/install:$PATH
 export PATH=/opt/local/sbt/latest/bin:$PATH
-export PATH=opt/scala/2.11.2/bin:$PATH
+export PATH=/opt/scala/2.11.2/bin:$PATH
 
 
 
@@ -154,4 +155,5 @@ alias r="sbt run"
 alias 1="pushd ~/game_of_life"
 
 alias jab1="ssh jabdussa1@jabdussa.com"
+
 
