@@ -163,4 +163,8 @@ alias 1="pushd ~/game_of_life"
 
 alias jab1="ssh jabdussa1@jabdussa.com"
 
+jab1.scp(){
+	scp "$1" jabdussa1@jabdussa.com:~/z
+}
+
 
