@@ -93,6 +93,13 @@ b.push(){
 	cd $CDIR 
 }
 
+b.pull(){
+	CDIR="`pwd`"
+	cd ~/env
+	git pull 
+	cd $CDIR 
+}
+
 
 b.merge(){
 	CDIR="`pwd`"
