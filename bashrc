@@ -183,3 +183,64 @@ alias ld="l.d"
 alias 2z="pushd ~/z"
 alias 2dl="pushd ~/Downloads"
 
+# ==============================================
+
+# Round 3# User specific aliases and functions
+
+# ============================================
+
+set -o vi
+
+# ============================================
+
+# export PS1="\n[\u@\h - \w]\\$ "
+
+ export PS1="\n[\u@\h(\#) - \d, \D{%Y} \@ - \w]\n\n> "
+
+# ============================================
+
+export PATH=$PATH:/opt/java/1.8.0_261/bin
+export PATH=$PATH:/opt/sbt/1.3.13/bin
+export PATH=$PATH:/opt/scala/2.12.12/bin
+export PATH=$PATH:/opt/intellij/202.6948.69/bin
+
+# ============================================
+
+alias c="clear"
+
+alias l="ls -F"
+
+alias ll="ls -lFh"
+
+alias pd="pushd $1"
+
+alias po="popd"
+
+alias 2="pushd $1"
+
+alias 2books="pushd ~/books"
+
+# ============================================
+
+vibash(){
+	vi ~/.bashrc
+}
+
+.bash(){
+	. ~/.bashrc
+}
+
+..(){
+	cd ..
+}
+
+
+h(){
+	if [ -z "$1" ] ; then
+		history 
+	else
+     		history | grep "$1" | grep -v "grep"
+	fi
+}
+
+
