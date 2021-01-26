@@ -7,10 +7,10 @@ fi
 # #   PATH
 # # # # # # # # # # # #
 
-export PATH=~/install:$PATH
-export PATH=/opt/local/sbt/latest/bin:$PATH
-export PATH=/opt/scala/2.11.2/bin:$PATH
-
+export PATH=$PATH:/opt/java/1.8.0_261/bin
+export PATH=$PATH:/opt/sbt/1.3.13/bin
+export PATH=$PATH:/opt/scala/2.12.12/bin
+export PATH=$PATH:/opt/intellij/202.6948.69/bin
 
 
 # # # # # # # # # # # #
