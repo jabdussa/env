@@ -11,6 +11,7 @@ export PATH=$PATH:/opt/java/1.8.0_261/bin
 export PATH=$PATH:/opt/sbt/1.3.13/bin
 export PATH=$PATH:/opt/scala/2.12.12/bin
 export PATH=$PATH:/opt/intellij/202.6948.69/bin
+export PATH=$PATH:/opt/mvn/3.6.3/bin
 
 
 # # # # # # # # # # # #
